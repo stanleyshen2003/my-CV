@@ -28,8 +28,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: chesterchu_cv
-          path: chesterchu_cv.pdf
+          name: stanleyshen2003
+          path: stanleyshen2003.pdf
 
       - name: Configure auth for push
         if: ${{ github.event_name == 'push' }}
