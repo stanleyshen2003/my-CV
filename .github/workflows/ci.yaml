@@ -21,7 +21,7 @@ jobs:
         with:
           root_file: cv.tex
           latexmk_use_xelatex: true
-          args: -interaction=nonstopmode -file-line-error -halt-on-error -jobname=chesterchu_cv
+          args: -interaction=nonstopmode -file-line-error -halt-on-error -jobname=stanleyshen2003
           extra_system_packages: 'fontconfig font-noto-cjk font-wqy-zenhei'
           pre_compile: "fc-cache -fv && fc-list | grep -i 'cjk\\|wqy' || true"
 
@@ -44,10 +44,10 @@ jobs:
           set -e
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add chesterchu_cv.pdf || true
+          git add stanleyshen2003.pdf || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: update chesterchu_cv.pdf (auto-generated)"
+            git commit -m "chore: update stanleyshen2003.pdf (auto-generated)"
             git push
           fi
